@@ -1,0 +1,192 @@
+﻿@model _0908Datatable.SPM_Auto_Record_Log
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SPM_Auto_Record_Log</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Project_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Part_Num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Part_Num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DWG_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DWG_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DWG_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DWG_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Template_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Template_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Template_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Template_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Template_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Template_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NC_For)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NC_For)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UG_PP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UG_PP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRT_HoleDia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRT_HoleDia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToolIPNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToolIPNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToolHolder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToolHolder)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uipath_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uipath_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uipath_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uipath_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NC_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NC_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NC_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NC_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MPMS_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MPMS_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMail_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMail_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NC_UploadError)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NC_UploadError)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rowguid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rowguid)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

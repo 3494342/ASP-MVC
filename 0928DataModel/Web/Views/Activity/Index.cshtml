@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ViewModels.ActivityViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            
+            @Html.DisplayNameFor(model => model.Site)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pm_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Monitoring_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Act_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.workshop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_Source)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Site)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pm_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monitoring_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Act_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.workshop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_Source)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,66 @@
+﻿@using _0907Ajax.Models
+
+@{
+    ViewBag.Title = "Index";
+    //AjaxOptions opt = new AjaxOptions()
+    //{
+    //    UpdateTargetId = "divSub"//更新部分
+
+    //};
+}
+
+<h2>AJAX ACTION LINK</h2>
+
+
+<!--
+ <div class="row">
+    <div class="col-sm-6">
+        <h3>Select course</h3>
+        <hr/>
+        <ul>
+            @*@foreach (Course c in ViewBag.Courses)
+            {
+                <li>
+                    @Ajax.ActionLink(c.CourseName, "DisplaySub", new {cid = c.CourseId}, opt)
+                </li>
+            }*@
+
+        </ul>
+    </div>
+</div>   
+-->
+<div class="form-group">
+    <label>Select Course</label>
+    @Html.DropDownList("cid",new SelectList(ViewBag.Courses,"CourseId", "CourseName","Select Course"),new {@class = "form-control"})
+
+</div>
+<div class="form-group">
+    <label>Select Subject</label>
+    <select name="CourseId" id="CourseId" class="form-control">
+        <option value="">Select subject</option>
+    </select>
+</div>
+
+@section myAjax
+{
+@*    <script src="~/scripts/jquery.unobtrusive-ajax.js"></script>*@
+    <script>
+        $('#cid').change(function() {
+          var  id = $(this).val();
+            $.ajax({
+                url: '@Url.Action("DisplaySub")',
+                data: { 'cid': id },
+                dataType:'json',
+                success: function(data, status, req) {
+                    $('#CourseId').html('<option value="">Select subject</option>');
+                    for (var i = 0; i < data.length; i++) {
+                        str = '<option value="' + data[i].CourseId + '">' + data[i].SubjectName +
+                            '</option>';
+                        $('#CourseId').append(str);
+                    }
+                }
+            });
+        });
+    </script>
+}
+

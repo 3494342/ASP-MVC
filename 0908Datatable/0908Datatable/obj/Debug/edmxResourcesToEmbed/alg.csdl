@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ALGCAMModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SPM_Auto_Record_Log">
+    <Key>
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="Project_ID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Part_Num" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DWG_Status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DWG_Time" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Template_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Template_Status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Template_Time" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NC_For" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UG_PP" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRT_HoleDia" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ToolIPNA" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="ToolHolder" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Uipath_Status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Uipath_Date" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NC_Status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NC_Date" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MPMS_Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMail" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EMail_Date" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NC_UploadError" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SPM_Routing_TemplateInfo">
+    <Key>
+      <PropertyRef Name="TempateID" />
+      <PropertyRef Name="Routing" />
+      <PropertyRef Name="Routing_SEQ" />
+      <PropertyRef Name="Feature" />
+    </Key>
+    <Property Name="TempateID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Routing" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Routing_SEQ" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Feature" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ALGCAMEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SPM_Auto_Record_Log" EntityType="Self.SPM_Auto_Record_Log" />
+    <EntitySet Name="SPM_Routing_TemplateInfo" EntityType="Self.SPM_Routing_TemplateInfo" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ALGCAMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cnc_activity_log">
+    <Key>
+      <PropertyRef Name="Site" />
+      <PropertyRef Name="pm_no" />
+      <PropertyRef Name="Monitoring_Type" />
+      <PropertyRef Name="Act_Time" />
+    </Key>
+    <Property Name="Site" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pm_no" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Monitoring_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Act_Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="workshop" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MC_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Data_Source" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CNC_Master_List">
+    <Key>
+      <PropertyRef Name="site" />
+      <PropertyRef Name="pm_no" />
+    </Key>
+    <Property Name="site" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pm_no" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Workshop" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MC_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CNC_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Monitoring" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ALGCAMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cnc_activity_log" EntityType="Self.cnc_activity_log" />
+    <EntitySet Name="CNC_Master_List" EntityType="Self.CNC_Master_List" />
+  </EntityContainer>
+</Schema>

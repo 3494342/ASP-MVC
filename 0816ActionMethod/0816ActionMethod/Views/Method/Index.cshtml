@@ -1,0 +1,43 @@
+﻿@using System.Drawing
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    string msg = "<p>Good!</p>";
+    string[] clors = new string[] { "red", "blue", "green" };
+    string dateTimeString = "DateTime";
+    TempData.Keep("name");
+    //TempData.Keep();
+}
+<h2>Index</h2>
+<h2>
+    Today is @System.DateTime.Now.ToString()
+    This is (@dateTimeString).Now
+</h2>
+<br/>
+@msg
+@*@if (DateTime.IsLeapYear(2022))
+{
+    <b>Leap Year</b>
+}
+else
+{
+  <b>Not Leap Year</b>
+}*@
+<ul>
+    @foreach (string temp in ViewBag.colors)
+    {
+        <li>@temp</li>
+    }
+    @foreach (string temp in ViewData["colors"] as IEnumerable<string>)
+    {
+        <li>@temp</li>
+    }
+</ul>
+<hr/>
+Name is @TempData["name"]<b></b>
+Number is @TempData.Peek("number")<b></b>
+
+<a href="/Method/About">about</a>
+@Html.Raw(msg)
+

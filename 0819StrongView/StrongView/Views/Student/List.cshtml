@@ -1,0 +1,24 @@
+﻿@using StrongView.Models;
+@Model IEnumerable<Student>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<hr/>
+<table>
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Number</th>
+    </tr>
+    @foreach (Student s in Model)
+    {
+        <tr>
+            <td>@s.Rollno</td>
+            <td>@s.Name</td>
+            <td>@s.Number</td>
+        </tr>
+    }
+</table>
+

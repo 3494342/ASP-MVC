@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ALGCAMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="cnc_activity_log">
+          <Key>
+            <PropertyRef Name="Site" />
+            <PropertyRef Name="pm_no" />
+            <PropertyRef Name="Monitoring_Type" />
+            <PropertyRef Name="Act_Time" />
+          </Key>
+          <Property Name="Site" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="pm_no" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="Monitoring_Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Value" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Act_Time" Type="datetime" Nullable="false" />
+          <Property Name="workshop" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MC_Code" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Data_Source" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CNC_Master_List">
+          <Key>
+            <PropertyRef Name="site" />
+            <PropertyRef Name="pm_no" />
+          </Key>
+          <Property Name="site" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="pm_no" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="Workshop" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MC_Code" Type="varchar" MaxLength="20" />
+          <Property Name="CNC_Type" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Monitoring" Type="varchar" MaxLength="3" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ALGCAMModelStoreContainer">
+          <EntitySet Name="cnc_activity_log" EntityType="Self.cnc_activity_log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CNC_Master_List" EntityType="Self.CNC_Master_List" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ALGCAMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="cnc_activity_log">
+          <Key>
+            <PropertyRef Name="Site" />
+            <PropertyRef Name="pm_no" />
+            <PropertyRef Name="Monitoring_Type" />
+            <PropertyRef Name="Act_Time" />
+          </Key>
+          <Property Name="Site" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pm_no" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Monitoring_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Act_Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="workshop" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MC_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Data_Source" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CNC_Master_List">
+          <Key>
+            <PropertyRef Name="site" />
+            <PropertyRef Name="pm_no" />
+          </Key>
+          <Property Name="site" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pm_no" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Workshop" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MC_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CNC_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Monitoring" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ALGCAMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="cnc_activity_log" EntityType="Self.cnc_activity_log" />
+          <EntitySet Name="CNC_Master_List" EntityType="Self.CNC_Master_List" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ALGCAMModelStoreContainer" CdmEntityContainer="ALGCAMEntities">
+          <EntitySetMapping Name="cnc_activity_log">
+            <EntityTypeMapping TypeName="ALGCAMModel.cnc_activity_log">
+              <MappingFragment StoreEntitySet="cnc_activity_log">
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="pm_no" ColumnName="pm_no" />
+                <ScalarProperty Name="Monitoring_Type" ColumnName="Monitoring_Type" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Act_Time" ColumnName="Act_Time" />
+                <ScalarProperty Name="workshop" ColumnName="workshop" />
+                <ScalarProperty Name="MC_Code" ColumnName="MC_Code" />
+                <ScalarProperty Name="Data_Source" ColumnName="Data_Source" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CNC_Master_List">
+            <EntityTypeMapping TypeName="ALGCAMModel.CNC_Master_List">
+              <MappingFragment StoreEntitySet="CNC_Master_List">
+                <ScalarProperty Name="site" ColumnName="site" />
+                <ScalarProperty Name="pm_no" ColumnName="pm_no" />
+                <ScalarProperty Name="Workshop" ColumnName="Workshop" />
+                <ScalarProperty Name="MC_Code" ColumnName="MC_Code" />
+                <ScalarProperty Name="CNC_Type" ColumnName="CNC_Type" />
+                <ScalarProperty Name="Monitoring" ColumnName="Monitoring" />
+                <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

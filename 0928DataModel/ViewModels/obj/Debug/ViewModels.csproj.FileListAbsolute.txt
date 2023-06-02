@@ -1,0 +1,10 @@
+C:\Users\80029574\Documents\Code\0928DataModel\ViewModels\bin\Debug\ViewModels.dll
+C:\Users\80029574\Documents\Code\0928DataModel\ViewModels\bin\Debug\ViewModels.pdb
+C:\Users\80029574\Documents\Code\0928DataModel\ViewModels\obj\Debug\ViewModels.csprojResolveAssemblyReference.cache
+C:\Users\80029574\Documents\Code\0928DataModel\ViewModels\obj\Debug\ViewModels.dll
+C:\Users\80029574\Documents\Code\0928DataModel\ViewModels\obj\Debug\ViewModels.pdb
+C:\Users\80029574\Documents\Code\0928DataModel\ViewModels\bin\Debug\ViewModels.dll.config
+C:\Users\80029574\Documents\Code\0928DataModel\ViewModels\bin\Debug\EntityFramework.dll
+C:\Users\80029574\Documents\Code\0928DataModel\ViewModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\80029574\Documents\Code\0928DataModel\ViewModels\bin\Debug\EntityFramework.xml
+C:\Users\80029574\Documents\Code\0928DataModel\ViewModels\bin\Debug\EntityFramework.SqlServer.xml

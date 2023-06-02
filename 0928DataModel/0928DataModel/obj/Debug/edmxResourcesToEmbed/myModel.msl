@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ALGCAMModelStoreContainer" CdmEntityContainer="ALGCAMEntities">
+    <EntitySetMapping Name="cnc_activity_log">
+      <EntityTypeMapping TypeName="ALGCAMModel.cnc_activity_log">
+        <MappingFragment StoreEntitySet="cnc_activity_log">
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="pm_no" ColumnName="pm_no" />
+          <ScalarProperty Name="Monitoring_Type" ColumnName="Monitoring_Type" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Act_Time" ColumnName="Act_Time" />
+          <ScalarProperty Name="workshop" ColumnName="workshop" />
+          <ScalarProperty Name="MC_Code" ColumnName="MC_Code" />
+          <ScalarProperty Name="Data_Source" ColumnName="Data_Source" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CNC_Master_List">
+      <EntityTypeMapping TypeName="ALGCAMModel.CNC_Master_List">
+        <MappingFragment StoreEntitySet="CNC_Master_List">
+          <ScalarProperty Name="site" ColumnName="site" />
+          <ScalarProperty Name="pm_no" ColumnName="pm_no" />
+          <ScalarProperty Name="Workshop" ColumnName="Workshop" />
+          <ScalarProperty Name="MC_Code" ColumnName="MC_Code" />
+          <ScalarProperty Name="CNC_Type" ColumnName="CNC_Type" />
+          <ScalarProperty Name="Monitoring" ColumnName="Monitoring" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

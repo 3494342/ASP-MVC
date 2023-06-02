@@ -1,0 +1,153 @@
+﻿@model IEnumerable<_0908Datatable.SPM_Auto_Record_Log>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Project_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Part_Num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DWG_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DWG_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Template_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Template_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Template_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NC_For)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UG_PP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRT_HoleDia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolIPNA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolHolder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Uipath_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Uipath_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NC_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NC_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MPMS_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMail_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NC_UploadError)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rowguid)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Project_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part_Num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DWG_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DWG_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Template_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Template_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Template_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NC_For)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UG_PP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRT_HoleDia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToolIPNA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToolHolder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Uipath_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Uipath_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NC_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NC_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MPMS_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMail_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NC_UploadError)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rowguid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

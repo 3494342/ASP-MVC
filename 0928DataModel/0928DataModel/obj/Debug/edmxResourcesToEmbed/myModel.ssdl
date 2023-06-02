@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ALGCAMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cnc_activity_log">
+    <Key>
+      <PropertyRef Name="Site" />
+      <PropertyRef Name="pm_no" />
+      <PropertyRef Name="Monitoring_Type" />
+      <PropertyRef Name="Act_Time" />
+    </Key>
+    <Property Name="Site" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="pm_no" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Monitoring_Type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Act_Time" Type="datetime" Nullable="false" />
+    <Property Name="workshop" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MC_Code" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Data_Source" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CNC_Master_List">
+    <Key>
+      <PropertyRef Name="site" />
+      <PropertyRef Name="pm_no" />
+    </Key>
+    <Property Name="site" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="pm_no" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Workshop" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MC_Code" Type="varchar" MaxLength="20" />
+    <Property Name="CNC_Type" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Monitoring" Type="varchar" MaxLength="3" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ALGCAMModelStoreContainer">
+    <EntitySet Name="cnc_activity_log" EntityType="Self.cnc_activity_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CNC_Master_List" EntityType="Self.CNC_Master_List" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

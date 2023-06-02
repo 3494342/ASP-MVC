@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ALGCAMModel1StoreContainer" CdmEntityContainer="ALGCAMEntities1">
+    <EntitySetMapping Name="SPM_Auto_Record_Log">
+      <EntityTypeMapping TypeName="ALGCAMModel1.SPM_Auto_Record_Log">
+        <MappingFragment StoreEntitySet="SPM_Auto_Record_Log">
+          <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+          <ScalarProperty Name="Part_Num" ColumnName="Part_Num" />
+          <ScalarProperty Name="DWG_Status" ColumnName="DWG_Status" />
+          <ScalarProperty Name="DWG_Time" ColumnName="DWG_Time" />
+          <ScalarProperty Name="Template_ID" ColumnName="Template_ID" />
+          <ScalarProperty Name="Template_Status" ColumnName="Template_Status" />
+          <ScalarProperty Name="Template_Time" ColumnName="Template_Time" />
+          <ScalarProperty Name="NC_For" ColumnName="NC_For" />
+          <ScalarProperty Name="UG_PP" ColumnName="UG_PP" />
+          <ScalarProperty Name="PRT_HoleDia" ColumnName="PRT_HoleDia" />
+          <ScalarProperty Name="ToolIPNA" ColumnName="ToolIPNA" />
+          <ScalarProperty Name="ToolHolder" ColumnName="ToolHolder" />
+          <ScalarProperty Name="Uipath_Status" ColumnName="Uipath_Status" />
+          <ScalarProperty Name="Uipath_Date" ColumnName="Uipath_Date" />
+          <ScalarProperty Name="NC_Status" ColumnName="NC_Status" />
+          <ScalarProperty Name="NC_Date" ColumnName="NC_Date" />
+          <ScalarProperty Name="MPMS_Status" ColumnName="MPMS_Status" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="EMail_Date" ColumnName="EMail_Date" />
+          <ScalarProperty Name="NC_UploadError" ColumnName="NC_UploadError" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SPM_Routing_TemplateInfo">
+      <EntityTypeMapping TypeName="ALGCAMModel1.SPM_Routing_TemplateInfo">
+        <MappingFragment StoreEntitySet="SPM_Routing_TemplateInfo">
+          <ScalarProperty Name="TempateID" ColumnName="TempateID" />
+          <ScalarProperty Name="Routing" ColumnName="Routing" />
+          <ScalarProperty Name="Routing_SEQ" ColumnName="Routing_SEQ" />
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
